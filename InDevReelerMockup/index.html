@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Franklin L. Vega">
+    <meta name="description" content="initial homepage/dashboard design">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+    
+</head>
+<body>
+    <div class="main">
+<!-- Side navigation -->
+<div class="sidebar" id="mySidebar">
+      <a href="javascript:void(0);" class="icon">
+  <i class="fa fa-bars"></i>
+  </a> 
+    <!-- Search form -->
+  <input class="form-control" type="text" placeholder="Search..." aria-label="Search...">
+  <a class="active" href="#home"><i class="fas fa-columns"></i> Dashboard</a>
+  <a href="profile.html"><i class="fas fa-meh-blank"></i> My Profile</a>
+  <a href="teams.html"><i class="fas fa-people-carry"></i> Manage Teams</a>
+  <a href="messages.html"><i class="far fa-envelope"></i> Messages</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+  <a href="#logout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+
+   
+</div>
+
+<!-- Page content -->
+<div class="content">
+ <div class="container">
+     <h1>Dashboard</h1>
+         
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-xl-10 w-80 d-flex">
+                <div class="card d-flex mb-4 w-100">
+                    <div class="card-body w-100 d-flex">
+                        <div class="row w-100">
+                            <div class="col-md">
+                                <h2 class="card-header text-center">Recent Team Activity</h2>
+                                <li class="list-group-item" id="recent-activity">No recent activity</li>
+           
+                            </div>	
+                        </div>	
+                    </div>
+                </div>	
+            </div>
+
+        </div>
+        <div class="row">
+            <!-- Card 2 -->
+            <div class="col-xl-5 d-flex">
+                <div class="card d-flex mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h2 class="card-header">Recent Dev Requests</h2>
+                                <li class="list-group-item" id="dev-req">No recent dev requests</li> 
+                                
+                                <a href="#" class="btn btn-dark d-flex btn-primary">View More Dev Requests</a>
+                            </div>	
+                        </div>	
+                    </div>
+                </div>	
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-xl-5 d-flex">
+                <div class="card d-flex mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                        <div class="col-sm">
+                                <h2 class="card-header">Recent Join Team Requests</h2>
+                                <li class="list-group-item" id="join-req">No Recent Join Requests</li>
+                  
+                                <a href="#" class="btn btn-dark btn-primary d-flex">View Join Team Requests</a>
+                        </div>
+                    </div>  
+                </div>  
+            </div>
+		</div>
+     </div>
+	  <div class="row">
+          
+            <!-- Card 4 
+            <div class="col-xl-6 col-xl-3 d-flex">
+                <div class="card d-flex mb-4">
+                    <div class="card-body d-flex">
+                        <div class="row">
+                            <div class="col-lg">
+                                <h2 class="card-title">Twitter Feed</h2>
+                                <p class="card-text">Maiores voluptate rem odit dolor temporibus asperiores maxime velit sapiente.</p>
+
+                            </div>	
+                        </div>  
+                    </div>
+                </div>
+            </div>-->
+        </div>
+	  
+	<!--<section>
+		<h2>Overview</h2>
+		<p>
+		While it technically is possible to make video games as a <a href="https://www.giantbomb.com/team-shanghai-alice/3010-6355/">one man army,</a>
+		doing so is usually extremely daunting, difficult, and time consuming. Very few individuals are
+		willing do do so. Typically, if one were to completely make a game on their own, they would have to perform the 
+		role of game designer, project manager, producer, artist, programmer, quality assurance, as well as sound and music composer. 
+		In most cases, (even in indie game development) there is typically a small team of individuals, each performing their own specialty in 
+		order to create a complete product. However, while many people have the talents to do some of these tasks individually, 
+		finding team members to work with can be a major hurdle for many. Many indivuduals also have many great ideas for video games, 
+		but are unable to act upon their ideas as indivuduals.
+		</p>
+		<p>
+		I propose that there should be a new service to work towards conqering this initial and crucial step of indie game development. 
+		While there are already some services, such as <a href="https://github.com/">Github</a> and <a href="https://itch.io/">Itch.io</a> where source code can be collaborated and games themselves can be hosted/downloaded,
+		there is a need for a specialized service for the formation and collaboration of a independent game development team. There are other services 
+		out there where this could be performed through listings that can be created searching for people to take on specific jobs, but these other services
+		are not typically specialized in indie game development team formation/collaboration. 
+		</p>
+
+
+	</section>
+	
+	<section>
+		<h2>Potential Web Applications</h2>
+		<li>A profile based website that can showcase aspiring developers talents/skills and easily allow them to form teams</li>
+		<li>A blogging website specialized in showing progress of independent video game developer projects. Teams can post articles, videos, hold live AMA sessions, etc.</li>
+	</section>-->
+  
+
+  </div>
+</div>
+
+  
+
+</div>
+
+<!-- D3 -->
+<script src="https://d3js.org/d3.v5.min.js"></script>    
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>    
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<!--For whatever reason, d3 would not work in the separate script.js file, so I'm putting it here for now-->
+<script>
+
+//Load in Recent Activity from csv file
+d3.csv("mock_data/recent-activity.csv").then(function(data) {
+
+    for (let i = 0; i < data.length; i++) {
+    $("#recent-activity").html('');
+    $("#recent-activity").after('<li class=\"list-group-item\" id=\"recent-activity\">'+data[i].recent+'</li>');
+    }
+
+    
+});
+
+//Load in recent dev requests from csv file    
+d3.csv("mock_data/dev-req.csv").then(function(data) {
+
+    for (let i = 0; i < data.length; i++) {
+    $("#dev-req").html('');
+    $("#dev-req").after('<li class=\"list-group-item\" id=\"dev-req\">'+data[i].recent+'</li>');
+    }
+
+    
+});
+ 
+//load in recent dev team join requests from csv file    
+d3.csv("mock_data/join-req.csv").then(function(data) {
+
+    for (let i = 0; i < data.length; i++) {
+    $("#join-req").html('');
+    $("#join-req").after('<li class=\"list-group-item\" id=\"join-req\">'+data[i].recent+'</li>');
+    }
+
+    
+});      
+
+    </script>  
+    
+<script src="js/script.js"></script>    
+    
+</body>
+</html>

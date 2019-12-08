@@ -1,0 +1,80 @@
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 195px;
+  background-image: radial-gradient(slategrey, darkslategrey);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: inherit;
+    
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: azure;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: seagreen;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: darkseagreen;
+  color: darkslategray;
+}
+
+.sidebar .icon {
+    display: none;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+  background-image: repeating-linear-gradient(mintcream, white);
+  font-family: inherit;
+  color: dimgrey;
+}
+
+/* On screens that are less than 720px wide, make the sidebar into a topbar */
+@media (max-width: 720px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar input {display: none}    
+  .sidebar a {float: left; display: none;}
+  div.content {margin-left: 0;}
+
+    .sidebar .icon {float: left;
+    display: block;}
+}
+
+/* The "responsive" class is added to the sidebar with JavaScript when the user clicks on the icon. This class makes the sidebar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 720px) {
+  .sidebar.responsive {position: relative;}
+  .sidebar.responsive a.icon {
+    
+    right: 0;
+    top: 0;
+  }
+  .sidebar.responsive input {float: none;
+    display: block;}    
+  .sidebar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+      
+  }
+   
+}
